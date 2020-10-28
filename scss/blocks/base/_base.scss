@@ -1,0 +1,137 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before,*::after{
+    box-sizing: inherit;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+p{
+    margin: 0;
+}
+
+ul,
+li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+body{
+    // color: $black;
+    font-family: $regular;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    // color: $darkBlue;
+    background-color: #38AECC;
+}
+
+.container{
+    max-width: 1440px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+// .content{
+//     background-color: #38AECC;
+//     // height: 100vh;
+// }
+
+.content{
+    // height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.content__inner{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.content__inner-item{
+    // padding: 0px 10px;
+    width: 290px;
+    color: white;
+    border: 1px solid white;
+}
+
+.item__wrapper{
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    height: max-content;
+}
+
+.content__logo{
+    position: relative;
+    width: 100%;
+    height: 285px;
+    border-bottom: 1px solid white;
+    img{
+        position: absolute;
+        margin: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.content__title{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.content__descr{
+    font-size: 15px;
+    padding: 0px 10px;
+}
+
+
+.links__list{
+    text-align: center;
+}
+
+
+@media(max-width: 1429px){
+    .item__wrapper{
+        margin-top: 15px;
+    }
+}
+@media(max-width: 1140px){
+    .content__inner{
+        justify-content: space-around;
+    }
+}
+@media(max-width: 750px){
+    .content__inner{
+        justify-content: space-around;
+    }
+    .item__wrapper{
+        width: 100%;
+    }
+}
+@media(max-width: 640px){
+    .item__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__inner-item{
+        margin-top: 15px;
+    }
+}
